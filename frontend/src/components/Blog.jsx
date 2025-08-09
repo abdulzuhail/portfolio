@@ -11,6 +11,44 @@ const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
 const Blog = () => {
+  const [email, setEmail] = useState('');
+  const [isSubscribing, setIsSubscribing] = useState(false);
+  const { toast } = useToast();
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubscribing(true);
+
+    try {
+      const response = await axios.post(`${API}/newsletter/subscribe`, { email });
+      
+      if (response.data.success) {
+        toast({
+          title: response.data.already_subscribed ? "Already subscribed!" : "Successfully subscribed!",
+          description: response.data.message,
+        });
+        
+        if (!response.data.already_subscribed) {
+          setEmail('');
+        }
+      }
+    } catch (error) {
+      console.error('Error subscribing to newsletter:', error);
+      
+      let errorMessage = "Sorry, there was an error subscribing. Please try again.";
+      if (error.response?.data?.detail) {
+        errorMessage = error.response.data.detail;
+      }
+      
+      toast({
+        title: "Subscription failed",
+        description: errorMessage,
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubscribing(false);
+    }
+  };
   return (
     <section id="blog" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
