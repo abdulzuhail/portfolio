@@ -5,7 +5,7 @@ export const personalInfo = {
   title: "Data Analyst",
   subtitle: "MCA Student | Data Analysis & Visualization Specialist",
   location: "Devala, India",
-  email: "abdulzuhail@email.com",
+  email: "abdulzuhail18@gmail.com",
   phone: "+91 6381482902",
   profileImage: "https://customer-assets.emergentagent.com/job_3e8a5e6d-1846-4de4-9b85-0acdcb12ceeb/artifacts/ls3nl748_WhatsApp%20Image%202025-08-09%20at%2012.06.43_058dd74d.jpg",
   bio: "Motivated and detail-oriented Data Analyst with hands-on internship experience in real-time data analysis, visualization, and reporting. Skilled in Python, SQL, Power BI, Tableau, and Excel, with a strong ability to build dashboards and deliver business insights.",
@@ -49,69 +49,189 @@ export const skills = {
 export const projects = [
   {
     id: 1,
-    title: "Real-Time Social Media Sentiment Analysis",
+    title: "Data Analysis Using Python",
     category: "Data Analysis",
-    description: "Built a live dashboard to analyze Reddit posts for sentiment and sarcasm with predictive models for tracking and alerting on negative trend spikes.",
-    longDescription: "Developed a comprehensive real-time sentiment analysis system that monitors Reddit posts for sentiment and sarcasm detection. The project integrates FastAPI and Streamlit to create a scalable real-time interface that can track sentiment trends and provide automated alerts when negative sentiment spikes are detected.",
-    technologies: ["Python", "FastAPI", "Streamlit", "Transformers", "Scikit-learn", "PRAW", "Prophet"],
+    description: "Comprehensive data analysis project completed during internship at Main Flow Service & Technologies, showcasing end-to-end data processing and visualization techniques.",
+    longDescription: "This project represents the culmination of my internship work at Main Flow Service & Technologies, where I applied comprehensive data analysis techniques using Python. The project demonstrates my ability to handle real-world datasets, perform statistical analysis, and create meaningful visualizations that drive business insights.",
+    technologies: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Jupyter Notebook"],
     features: [
-      "Real-time Reddit data processing",
-      "Sentiment and sarcasm detection",
-      "Predictive trend analysis",
-      "Automated alert system",
-      "Interactive dashboard interface"
+      "Comprehensive data preprocessing and cleaning",
+      "Statistical analysis and hypothesis testing",
+      "Advanced data visualization techniques",
+      "Business insights generation",
+      "Interactive dashboard creation"
     ],
-    challenges: "Handling real-time data streams and ensuring accurate sentiment classification across different text formats and social media contexts.",
-    outcomes: "Successfully deployed a scalable sentiment monitoring system capable of processing live social media data and providing actionable insights for trend analysis.",
-    githubUrl: "https://github.com/abdulzuhail",
+    challenges: "Working with real-world messy data and ensuring accurate analysis while maintaining data integrity throughout the processing pipeline.",
+    outcomes: "Successfully delivered actionable insights that informed business decision-making processes and demonstrated proficiency in data analysis workflows.",
+    githubUrl: "https://github.com/abdulzuhail/Data-Analysis-Using-Python",
     liveUrl: "#",
-    image: "/api/placeholder/600/400"
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc1NDcyMzQ3NXww&ixlib=rb-4.1.0&q=85"
   },
   {
     id: 2,
-    title: "Amazon Sales Analytics Dashboard",
-    category: "Business Intelligence",
-    description: "Developed an interactive Power BI dashboard analyzing $2.1M+ sales across 19M+ reviews with automated regional and category-based insights.",
-    longDescription: "Created a comprehensive business intelligence dashboard using Power BI to analyze massive Amazon sales data. The dashboard processes over $2.1 million in sales data across 19 million+ customer reviews, providing executives with automated insights through DAX calculations and enabling detailed filtering by quarter, region, and product type.",
-    technologies: ["Power BI", "Excel", "DAX"],
+    title: "Real-Time Social Media Sentiment Analysis",
+    category: "Machine Learning",
+    description: "A real-time sentiment and emotion analysis system built using NLP, Transformer-based models (BERT/RoBERTa), and data streaming from Reddit with FastAPI backend and React + Streamlit dashboard.",
+    longDescription: "Advanced sentiment analysis system that processes real-time social media data from Reddit using state-of-the-art transformer models. The system combines NLP techniques with modern web technologies to create a comprehensive solution for monitoring social media sentiment trends and emotional patterns.",
+    technologies: ["Python", "FastAPI", "Streamlit", "React", "BERT", "RoBERTa", "Transformers", "PRAW", "Prophet"],
     features: [
-      "Interactive sales performance metrics",
-      "Regional and category analysis",
-      "Automated DAX calculations",
-      "Executive-level filtering options",
-      "Revenue trend visualization"
+      "Real-time Reddit data streaming",
+      "Advanced sentiment and emotion detection",
+      "Transformer-based model implementation",
+      "Interactive React + Streamlit dashboard",
+      "Predictive trend analysis with Prophet"
     ],
-    challenges: "Processing large datasets efficiently while maintaining dashboard performance and creating meaningful insights from massive review data.",
-    outcomes: "Delivered actionable business insights that enabled executives to make data-driven decisions on regional performance and product categories.",
-    githubUrl: "https://github.com/abdulzuhail/Amazon-Products",
+    challenges: "Integrating multiple technologies and ensuring real-time performance while maintaining accuracy of sentiment classification across diverse social media content.",
+    outcomes: "Successfully deployed a scalable sentiment monitoring system that provides real-time insights into social media trends and emotional patterns.",
+    githubUrl: "https://github.com/abdulzuhail/real-time-sentiment-analysis-on-social-media",
     liveUrl: "#",
-    image: "/api/placeholder/600/400"
+    image: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxzZW50aW1lbnQlMjBhbmFseXNpc3xlbnwwfHx8fDE3NTQ3MjM0ODF8MA&ixlib=rb-4.1.0&q=85"
   },
   {
     id: 3,
+    title: "Weather Monitoring Dashboard",
+    category: "Data Visualization",
+    description: "A comprehensive Power BI dashboard visualizing temperature, humidity, wind speed, and Air Quality Index (AQI) across major cities in Tamil Nadu for interactive weather monitoring.",
+    longDescription: "Created an advanced weather monitoring system using Power BI to track and visualize multiple environmental parameters across Tamil Nadu. The dashboard provides real-time insights into weather patterns and air quality, enabling stakeholders to make informed decisions based on environmental data.",
+    technologies: ["Power BI", "Python", "DAX", "Weather API", "Data Modeling"],
+    features: [
+      "Multi-parameter weather tracking",
+      "Real-time AQI monitoring",
+      "Interactive city-wise comparisons",
+      "Trend analysis and forecasting",
+      "Mobile-responsive dashboard design"
+    ],
+    challenges: "Integrating multiple weather data sources and ensuring accurate real-time updates while maintaining dashboard performance across different devices.",
+    outcomes: "Delivered a comprehensive weather monitoring solution that enables stakeholders to track environmental conditions and make data-driven decisions.",
+    githubUrl: "https://github.com/abdulzuhail/Weather-Monitoring-Dashboard",
+    liveUrl: "#",
+    image: "https://images.unsplash.com/photo-1717501219402-4444fcef55e7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHx3ZWF0aGVyJTIwZGF0YXxlbnwwfHx8fDE3NTQ3MjM0OTF8MA&ixlib=rb-4.1.0&q=85"
+  },
+  {
+    id: 4,
+    title: "Web Scraping Final Project",
+    category: "Data Engineering",
+    description: "Comprehensive web scraping project demonstrating data extraction and visualization techniques, scraping information about largest U.S. companies by revenue from Wikipedia.",
+    longDescription: "Advanced web scraping project that demonstrates proficiency in data extraction, processing, and visualization. The project scrapes comprehensive business data from Wikipedia, processes it using Python libraries, and creates insightful visualizations to analyze corporate revenue patterns and market trends.",
+    technologies: ["Python", "BeautifulSoup", "Scrapy", "Pandas", "Matplotlib", "Seaborn", "Jupyter Notebook"],
+    features: [
+      "Advanced web scraping techniques",
+      "Multi-format data extraction (JSON, CSV)",
+      "Table scraping and processing",
+      "Data visualization and analysis",
+      "Automated data collection pipelines"
+    ],
+    challenges: "Handling dynamic web content and ensuring data quality while scraping from multiple sources with different structures.",
+    outcomes: "Successfully extracted and analyzed corporate revenue data, providing insights into market trends and company performance patterns.",
+    githubUrl: "https://github.com/abdulzuhail/Web-Scraping-Final",
+    liveUrl: "#",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzd8MHwxfHNlYXJjaHwxfHx3ZWIlMjBzY3JhcGluZ3xlbnwwfHx8fDE3NTQ3MjM0ODZ8MA&ixlib=rb-4.1.0&q=85"
+  },
+  {
+    id: 5,
+    title: "Amazon Sales Analytics Dashboard",
+    category: "Business Intelligence",
+    description: "Interactive Power BI dashboard analyzing $2.1M+ sales across 19M+ reviews with automated regional and category-based insights using DAX calculations.",
+    longDescription: "Comprehensive business intelligence solution that analyzes massive Amazon sales datasets to provide strategic insights. The dashboard processes over $2.1 million in sales data across 19 million+ customer reviews, delivering automated insights through advanced DAX calculations and interactive visualizations.",
+    technologies: ["Power BI", "Excel", "DAX", "Data Modeling"],
+    features: [
+      "Large-scale data processing",
+      "Advanced DAX calculations",
+      "Regional performance analysis",
+      "Category-wise insights",
+      "Executive-level reporting"
+    ],
+    challenges: "Managing massive datasets while maintaining dashboard performance and creating meaningful insights from complex sales data.",
+    outcomes: "Enabled data-driven decision making for stakeholders, providing clear visibility into sales performance across multiple dimensions.",
+    githubUrl: "https://github.com/abdulzuhail/Amazon-Products",
+    liveUrl: "#",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwyfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc1NDcyMzQ3NXww&ixlib=rb-4.1.0&q=85"
+  },
+  {
+    id: 6,
     title: "Blinkit Sales & Outlet Performance Analysis",
     category: "Data Analysis",
-    description: "Conducted comprehensive performance review of outlets based on fat content and item categories, identifying underperforming outlets for optimization.",
-    longDescription: "Performed detailed analysis of Blinkit's outlet performance using Python data analysis libraries. The project involved analyzing sales patterns based on product fat content and item categories, creating comprehensive visualizations to help decision-makers identify optimization opportunities for underperforming outlets.",
-    technologies: ["Python", "Pandas", "Matplotlib", "Seaborn", "Jupyter Notebook"],
+    description: "Comprehensive analysis of Blinkit's outlet performance using Python, analyzing sales patterns based on product categories and fat content to identify optimization opportunities.",
+    longDescription: "Detailed performance analysis of Blinkit's retail ecosystem, examining sales patterns across different outlet types and product categories. The project provides actionable insights for outlet optimization and inventory management through comprehensive data analysis and visualization.",
+    technologies: ["Python", "Pandas", "Matplotlib", "Seaborn", "Jupyter Notebook", "Power BI"],
     features: [
-      "Outlet performance analysis",
-      "Category-wise sales breakdown",
-      "Fat content impact assessment",
+      "Outlet performance benchmarking",
+      "Category-wise sales analysis",
+      "Product attribute impact assessment",
       "Comprehensive data visualizations",
       "Optimization recommendations"
     ],
-    challenges: "Analyzing complex sales patterns across multiple outlets and product categories while ensuring accurate performance metrics.",
-    outcomes: "Successfully identified underperforming outlets and provided actionable recommendations for performance optimization, leading to improved business strategies.",
+    challenges: "Analyzing complex retail data across multiple dimensions while ensuring accurate performance metrics and meaningful business insights.",
+    outcomes: "Identified key optimization opportunities for underperforming outlets and provided data-driven recommendations for inventory management.",
     githubUrl: "https://github.com/abdulzuhail/Blinkit-Analysis-Python",
     liveUrl: "#",
-    image: "/api/placeholder/600/400"
+    image: "https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwzfHxkYXRhJTIwZGFzaGJvYXJkfGVufDB8fHx8MTc1NDcyMzQ3NXww&ixlib=rb-4.1.0&q=85"
+  },
+  {
+    id: 7,
+    title: "Hyper-Personalized Recommendation Engine",
+    category: "Machine Learning",
+    description: "Advanced product recommendation system incorporating emotion detection from customer reviews and behavioral analysis to provide hyper-personalized recommendations.",
+    longDescription: "Innovative recommendation system that goes beyond traditional collaborative filtering by incorporating emotional intelligence and behavioral analysis. The system analyzes customer emotions from text reviews and combines this with purchasing behavior to deliver highly personalized product recommendations.",
+    technologies: ["Python", "NLP", "Emotion Detection", "Machine Learning", "Recommendation Systems", "Transformers"],
+    features: [
+      "Emotion detection from customer reviews",
+      "Advanced behavioral pattern analysis",
+      "Hybrid recommendation algorithms",
+      "Real-time personalization",
+      "Performance optimization"
+    ],
+    challenges: "Balancing recommendation accuracy with computational efficiency while processing emotional context from unstructured review data.",
+    outcomes: "Achieved significant improvement in recommendation relevance through emotional intelligence integration, leading to enhanced user engagement.",
+    githubUrl: "https://github.com/abdulzuhail/Hyper-Personalized-Product-Recommendation-Engine-with-Emotion-Detection",
+    liveUrl: "#",
+    image: "https://images.unsplash.com/photo-1557562645-4eee56b29bc1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxtYWNoaW5lJTIwbGVhcm5pbmd8ZW58MHx8fHwxNzU0NzIzNTAyfDA&ixlib=rb-4.1.0&q=85"
+  },
+  {
+    id: 8,
+    title: "Automated Misinformation Detection Pipeline",
+    category: "AI/ML",
+    description: "End-to-end pipeline using KNIME, Python, and transformer-based AI models to detect and classify misinformation, leveraging RoBERTa for accurate fake news identification.",
+    longDescription: "Comprehensive misinformation detection system that combines KNIME Analytics Platform with advanced transformer models to combat fake news. The pipeline processes text data in real-time, performing sophisticated NLP analysis to identify and classify potentially misleading information with high accuracy.",
+    technologies: ["Python", "KNIME", "RoBERTa", "Transformers", "NLP", "Machine Learning Pipeline"],
+    features: [
+      "Real-time misinformation detection",
+      "Advanced transformer model integration",
+      "Automated pipeline orchestration",
+      "High-accuracy classification",
+      "Scalable processing architecture"
+    ],
+    challenges: "Handling diverse content types and languages while maintaining high accuracy in misinformation detection across different media formats.",
+    outcomes: "Developed a robust system capable of accurately identifying misinformation with high precision, contributing to digital media integrity.",
+    githubUrl: "https://github.com/abdulzuhail/Automated-Misinformation-Detection-Pipeline",
+    liveUrl: "#",
+    image: "https://images.pexels.com/photos/256502/pexels-photo-256502.jpeg"
   }
 ];
 
 export const experience = [
   {
     id: 1,
+    title: "Data Analysis Intern",
+    company: "Main Flow Service & Technologies",
+    period: "Jul 2025 - Present",
+    location: "Noida (Remote)",
+    description: "Currently working on comprehensive data analysis projects using Python, focusing on end-to-end data processing, statistical analysis, and visualization techniques.",
+    responsibilities: [
+      "Performing comprehensive data analysis using Python and statistical methods",
+      "Creating interactive visualizations and dashboards for business insights",
+      "Collaborating with cross-functional teams on data-driven projects",
+      "Documenting analysis processes and maintaining project records"
+    ],
+    achievements: [
+      "Successfully completed multiple data analysis projects",
+      "Developed proficiency in advanced Python data analysis techniques",
+      "Contributed to team meetings and project planning sessions"
+    ],
+    certificate: "https://customer-assets.emergentagent.com/job_abdul-projects/artifacts/04xa94cm_WhatsApp%20Image%202025-08-09%20at%2012.38.35_3712433d.jpg"
+  },
+  {
+    id: 2,
     title: "Data Scientist Intern",
     company: "Quantum Wolf",
     period: "Jan 2025 - Apr 2025",
@@ -130,7 +250,7 @@ export const experience = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: "Data Analyst Intern",
     company: "Internship Studio",
     period: "Sept 2024 - Oct 2024",
@@ -149,7 +269,7 @@ export const experience = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: "Data Engineer Intern",
     company: "Sharpened Mind & Tech Solutions",
     period: "Sept 2024",
