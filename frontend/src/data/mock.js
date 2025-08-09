@@ -3,20 +3,19 @@
 export const personalInfo = {
   name: "Abdul Zuhail M",
   title: "Data Analyst",
-  subtitle: "MCA Student | Data Analysis & Visualization Specialist",
+  subtitle: "MCA Graduate | Data Analysis & Visualization Specialist",
   location: "Devala, India",
   email: "abdulzuhail18@gmail.com",
   phone: "+91 6381482902",
   profileImage: "https://customer-assets.emergentagent.com/job_3e8a5e6d-1846-4de4-9b85-0acdcb12ceeb/artifacts/ls3nl748_WhatsApp%20Image%202025-08-09%20at%2012.06.43_058dd74d.jpg",
   bio: "Motivated and detail-oriented Data Analyst with hands-on internship experience in real-time data analysis, visualization, and reporting. Skilled in Python, SQL, Power BI, Tableau, and Excel, with a strong ability to build dashboards and deliver business insights.",
-  resumeUrl: "https://customer-assets.emergentagent.com/job_3e8a5e6d-1846-4de4-9b85-0acdcb12ceeb/artifacts/p42jhbdy_AbdulZuhailM_Resume.pdf"
+  resumeUrl: "https://customer-assets.emergentagent.com/job_abdul-projects/artifacts/4x490oc8_AbdulZuhailM_Resume_compressed.pdf"
 };
 
 export const socialLinks = {
   github: "https://github.com/abdulzuhail",
   linkedin: "https://www.linkedin.com/in/abdulzuhail/",
-  instagram: "https://www.instagram.com/itz_abdul_zuhail?igsh=OGE2NTVwd3FzNHFn",
-  portfolio: "https://www.datascienceportfol.io/abdulzuhail"
+  instagram: "https://www.instagram.com/itz_abdul_zuhail?igsh=OGE2NTVwd3FzNHFn"
 };
 
 export const skills = {
@@ -297,7 +296,7 @@ export const education = [
     period: "2023 - 2025",
     location: "Madurai",
     percentage: "80%",
-    status: "Pursuing"
+    status: "Completed"
   },
   {
     id: 2,
