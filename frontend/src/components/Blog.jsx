@@ -153,16 +153,23 @@ const Blog = () => {
 
                 {/* Newsletter Signup */}
                 <div className="max-w-md mx-auto">
-                  <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
+                  <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3">
                     <input
                       type="email"
                       placeholder="Enter your email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
                       className="flex-1 px-4 py-3 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
-                    <Button className="bg-blue-600 hover:bg-blue-700 px-6 py-3">
-                      Subscribe
+                    <Button 
+                      type="submit" 
+                      disabled={isSubscribing}
+                      className="bg-blue-600 hover:bg-blue-700 px-6 py-3"
+                    >
+                      {isSubscribing ? 'Subscribing...' : 'Subscribe'}
                     </Button>
-                  </div>
+                  </form>
                   <p className="text-xs text-gray-400 mt-2">
                     No spam, unsubscribe at any time.
                   </p>
