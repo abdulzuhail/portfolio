@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react';
 import { Card, CardContent, CardHeader } from './ui/card';
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
+import { useToast } from '../hooks/use-toast';
 import { blogPosts } from '../data/mock';
+import axios from 'axios';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const Blog = () => {
   return (
