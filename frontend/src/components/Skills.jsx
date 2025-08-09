@@ -1,7 +1,8 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Progress } from './ui/progress';
-import { skills } from '../data/mock';
+import { Badge } from './ui/badge';
+import { skills, certifications } from '../data/mock';
 
 const Skills = () => {
   const skillCategories = [
@@ -18,17 +19,34 @@ const Skills = () => {
       color: "from-green-500 to-green-600"
     },
     {
-      title: "Machine Learning & AI",
-      icon: "🤖",
-      skills: skills.machineLearning,
+      title: "Libraries & Frameworks",
+      icon: "📚",
+      skills: skills.libraries,
       color: "from-purple-500 to-purple-600"
     },
     {
-      title: "Tools & Frameworks",
+      title: "Tools & Platforms",
       icon: "🛠️",
       skills: skills.tools,
       color: "from-orange-500 to-orange-600"
     }
+  ];
+
+  const coreCompetencies = [
+    "Data Cleaning & Preprocessing",
+    "Data Analysis & Interpretation",
+    "Data Pipeline Development",
+    "ETL & Data Warehousing (Star Schema)",
+    "Dashboard Creation & Reporting",
+    "Business Intelligence Solutions"
+  ];
+
+  const familiarWith = [
+    "Agile Methodology",
+    "Test Case Writing (Basics)",
+    "SDLC/STLC (Basic Understanding)",
+    "Cross-time-zone collaboration",
+    "Hybrid/Remote work"
   ];
 
   return (
@@ -36,15 +54,15 @@ const Skills = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Skills & Expertise
+            Technical Skills
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            A comprehensive toolkit built through years of hands-on experience in 
-            data science, analytics, and machine learning.
+            Comprehensive technical skill set developed through hands-on internship experience 
+            and real-world project implementations.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {skillCategories.map((category, categoryIndex) => (
             <Card key={categoryIndex} className="hover:shadow-lg transition-shadow duration-300">
               <CardHeader>
@@ -81,43 +99,75 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Additional Skills Section */}
-        <div className="mt-16">
-          <Card className="bg-gradient-to-br from-gray-900 to-gray-800 text-white">
-            <CardContent className="p-8">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-4">Additional Competencies</h3>
-                <p className="text-gray-300">
-                  Complementary skills that enhance my data science capabilities
-                </p>
+        {/* Core Competencies */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+          <Card className="bg-blue-50 border-blue-200">
+            <CardHeader>
+              <CardTitle className="text-xl font-bold text-gray-900 flex items-center">
+                <span className="text-2xl mr-3">🎯</span>
+                Core Competencies
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 gap-2">
+                {coreCompetencies.map((competency, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <span className="text-gray-700">{competency}</span>
+                  </div>
+                ))}
               </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="text-center space-y-3">
-                  <div className="text-3xl">🎯</div>
-                  <h4 className="font-semibold">Problem Solving</h4>
-                  <p className="text-sm text-gray-300">
-                    Analytical thinking and systematic approach to complex challenges
-                  </p>
-                </div>
-                <div className="text-center space-y-3">
-                  <div className="text-3xl">📈</div>
-                  <h4 className="font-semibold">Business Intelligence</h4>
-                  <p className="text-sm text-gray-300">
-                    Translating data insights into actionable business strategies
-                  </p>
-                </div>
-                <div className="text-center space-y-3">
-                  <div className="text-3xl">🤝</div>
-                  <h4 className="font-semibold">Communication</h4>
-                  <p className="text-sm text-gray-300">
-                    Presenting complex findings to both technical and non-technical audiences
-                  </p>
-                </div>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-green-50 border-green-200">
+            <CardHeader>
+              <CardTitle className="text-xl font-bold text-gray-900 flex items-center">
+                <span className="text-2xl mr-3">🤝</span>
+                Familiar With
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 gap-2">
+                {familiarWith.map((item, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                    <span className="text-gray-700">{item}</span>
+                  </div>
+                ))}
               </div>
             </CardContent>
           </Card>
         </div>
+
+        {/* Certifications */}
+        <Card className="bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+          <CardContent className="p-8">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold mb-4 flex items-center justify-center">
+                <span className="text-3xl mr-3">🏆</span>
+                Professional Certifications
+              </h3>
+              <p className="text-gray-300">
+                Industry-recognized certifications from leading technology companies
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {certifications.map((cert, index) => (
+                <Badge key={index} variant="secondary" className="p-3 text-sm bg-gray-700 text-gray-100 hover:bg-gray-600">
+                  {cert}
+                </Badge>
+              ))}
+            </div>
+
+            <div className="text-center mt-8">
+              <p className="text-gray-400 text-sm">
+                Open to rotational shifts, hybrid/remote work, and cross-time-zone collaboration
+              </p>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );

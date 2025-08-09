@@ -1,43 +1,43 @@
 import React from 'react';
-import { Award, Users, Coffee, Code } from 'lucide-react';
+import { Award, Users, Coffee, Code, GraduationCap, MapPin } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
-import { personalInfo } from '../data/mock';
+import { personalInfo, education, languages } from '../data/mock';
 
 const About = () => {
   const stats = [
     {
       icon: <Code className="h-8 w-8" />,
-      number: "15+",
+      number: "10+",
       label: "Projects Completed",
       color: "text-blue-600"
     },
     {
       icon: <Award className="h-8 w-8" />,
-      number: "2+",
-      label: "Years Experience",
+      number: "3",
+      label: "Internships",
       color: "text-green-600"
     },
     {
-      icon: <Users className="h-8 w-8" />,
-      number: "50+",
-      label: "Satisfied Clients",
+      icon: <GraduationCap className="h-8 w-8" />,
+      number: "7+",
+      label: "Certifications",
       color: "text-purple-600"
     },
     {
       icon: <Coffee className="h-8 w-8" />,
-      number: "1000+",
-      label: "Cups of Coffee",
+      number: "500+",
+      label: "Hours of Analysis",
       color: "text-orange-600"
     }
   ];
 
   const highlights = [
-    "🎓 Master of Computer Applications (MCA) Graduate",
-    "📊 Specialized in Data Analytics and Machine Learning",
-    "🔍 Expert in transforming complex data into actionable insights",
-    "💡 Passionate about solving real-world problems with technology",
-    "🚀 Experienced in building end-to-end analytical solutions",
-    "🤝 Strong collaborator with cross-functional teams"
+    "🎓 MCA Student at Madurai Kamaraj University (80%)",
+    "📊 Hands-on experience in real-time data analysis and visualization",
+    "🔧 Skilled in Python, SQL, Power BI, Tableau, and Excel",
+    "💡 Experience in building dashboards and delivering business insights",
+    "🚀 Proven track record in automated workflows and data pipelines",
+    "📈 30% improvement in processing efficiency through automation"
   ];
 
   return (
@@ -48,8 +48,8 @@ const About = () => {
             About Me
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Driven by curiosity and powered by data, I transform complex information into 
-            meaningful insights that drive business success.
+            Motivated Data Analyst with hands-on internship experience in transforming 
+            raw data into actionable business insights.
           </p>
         </div>
 
@@ -58,18 +58,16 @@ const About = () => {
           <div className="space-y-6">
             <div className="space-y-4">
               <h3 className="text-2xl font-bold text-gray-900">
-                Turning Data into Strategic Advantages
+                Turning Data into Business Value
               </h3>
               <p className="text-gray-700 leading-relaxed">
-                As an MCA graduate with a passion for data science and analytics, I specialize 
-                in extracting meaningful patterns from complex datasets. My journey in technology 
-                has been driven by a constant desire to learn and apply cutting-edge techniques 
-                to solve real-world challenges.
+                {personalInfo.bio}
               </p>
               <p className="text-gray-700 leading-relaxed">
-                I believe that data is not just numbers and charts—it's stories waiting to be 
-                told. Through my work with Python, SQL, Power BI, and machine learning frameworks, 
-                I help organizations make informed decisions that drive growth and innovation.
+                Adept at working with structured and unstructured data, creating data pipelines, 
+                and generating actionable recommendations that drive decision-making. My experience 
+                spans from data engineering to visualization, with a focus on delivering measurable 
+                business impact.
               </p>
             </div>
 
@@ -87,9 +85,15 @@ const About = () => {
                 ))}
               </div>
             </div>
+
+            {/* Location */}
+            <div className="flex items-center space-x-2 text-gray-600">
+              <MapPin className="h-5 w-5" />
+              <span className="font-medium">{personalInfo.location}</span>
+            </div>
           </div>
 
-          {/* Stats */}
+          {/* Stats and Additional Info */}
           <div className="space-y-6">
             <div className="grid grid-cols-2 gap-6">
               {stats.map((stat, index) => (
@@ -107,19 +111,39 @@ const About = () => {
               ))}
             </div>
 
-            {/* Personal Touch */}
+            {/* Education Summary */}
             <Card className="bg-gradient-to-br from-blue-50 to-purple-50 border-none">
               <CardContent className="p-6">
                 <h4 className="text-lg font-semibold text-gray-900 mb-3">
-                  Beyond the Code
+                  <GraduationCap className="h-5 w-5 inline mr-2" />
+                  Education
                 </h4>
-                <p className="text-gray-700 leading-relaxed">
-                  When I'm not analyzing datasets or building machine learning models, 
-                  you'll find me exploring new technologies, contributing to open-source 
-                  projects, or sharing knowledge with the developer community. I believe 
-                  in continuous learning and staying updated with the latest trends in 
-                  data science and AI.
-                </p>
+                <div className="space-y-3">
+                  {education.map((edu, index) => (
+                    <div key={index} className="text-sm">
+                      <div className="font-semibold text-gray-900">{edu.degree}</div>
+                      <div className="text-gray-600">{edu.institution} - {edu.percentage}</div>
+                      <div className="text-gray-500">{edu.period}</div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Languages */}
+            <Card className="bg-gradient-to-br from-green-50 to-blue-50 border-none">
+              <CardContent className="p-6">
+                <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                  Languages
+                </h4>
+                <div className="space-y-2">
+                  {languages.map((lang, index) => (
+                    <div key={index} className="flex justify-between items-center">
+                      <span className="text-gray-700">{lang.name}</span>
+                      <span className="text-sm font-medium text-gray-600">{lang.level}</span>
+                    </div>
+                  ))}
+                </div>
               </CardContent>
             </Card>
           </div>
