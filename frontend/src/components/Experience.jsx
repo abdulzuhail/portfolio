@@ -1,7 +1,8 @@
 import React from 'react';
-import { MapPin, Calendar, Award, CheckCircle } from 'lucide-react';
+import { MapPin, Calendar, Award, CheckCircle, ExternalLink, FileText } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
+import { Button } from './ui/button';
 import { experience } from '../data/mock';
 
 const Experience = () => {
