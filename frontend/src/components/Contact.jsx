@@ -110,12 +110,6 @@ const Contact = () => {
       icon: <Instagram className="h-5 w-5" />,
       url: socialLinks.instagram,
       color: "text-pink-600 hover:text-pink-700"
-    },
-    {
-      name: "Portfolio",
-      icon: <ExternalLink className="h-5 w-5" />,
-      url: socialLinks.portfolio,
-      color: "text-purple-600 hover:text-purple-700"
     }
   ];
 
