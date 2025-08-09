@@ -90,6 +90,21 @@ const Experience = () => {
                           ))}
                         </div>
                       </div>
+                      {/* Certificate Link */}
+                      {job.certificate && (
+                        <div className="mt-4">
+                          <Button
+                            onClick={() => window.open(job.certificate, '_blank')}
+                            variant="outline"
+                            size="sm"
+                            className="flex items-center space-x-2 text-blue-600 border-blue-600 hover:bg-blue-50"
+                          >
+                            <FileText className="h-4 w-4" />
+                            <span>View Certificate</span>
+                            <ExternalLink className="h-3 w-3" />
+                          </Button>
+                        </div>
+                      )}
                     </CardContent>
                   </Card>
                 </div>
