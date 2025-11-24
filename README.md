@@ -19,24 +19,17 @@ The result is a complete, functioning portfolio structure generated through AI-d
 ---
 
 ## 📂 Repository Structure
-
+<pre>
 portfolio/
-
 │── .emergent/ # Agent workflow metadata & state
-
 │── backend/ # AI-generated backend code (APIs, logic, services)
-
 │── frontend/ # AI-generated UI code
-
 │── tests/ # Automated test suites created by agents
-
 │── contracts.md # Agent-defined architectural & module contracts
-
 │── test_result.md # Test execution summaries
-
 │── README.md # Project documentation
-
 │── yarn.lock # Dependency lockfile
+</pre>
 
 ---
 
